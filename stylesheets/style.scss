@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+* {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  font-weight: normal;
+}
+
+body {
+  background: rgb(201, 201, 201);
+  background: linear-gradient(0deg, rgba(201, 201, 201, 1) 0%, rgba(231, 231, 231, 1) 20%, rgba(255, 255, 255, 1) 100%);
+}
+
+header {
+  font-size: 0.5em;
+}
+
+.pic {
+  margin-bottom: 10px;
+  transform: scale(0.5);
+}
+
+.graphic {
+
+  svg {
+    height: 300px;
+    width: 300px;
+  }
+}
