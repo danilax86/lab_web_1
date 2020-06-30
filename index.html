@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Лабораторная работа №1">
+    <meta name="author" content="Горелко Данила Сергеевич">
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Лабораторная работа №1</title>
+</head>
+<body>
+<header>
+    <h1>Веб-программирование, Лабораторная работа №1, Вариант 2204</h1>
+    <div class="pic">
+        <img id="author" src="images/avatar.png" alt="Аватар Автора">
+    </div>
+</header>
+<table align="center">
+    <thead>
+    <td colspan="5">
+        <h3>Проверка введенных значений</h3>
+    </td>
+    </thead>
+    <tbody>
+    <tr>
+
+        <td colspan="15">
+            <hr>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">Выберите X:</td>
+        <td><label><input name="x_btn" type="radio" value="-2"></label>-2</td>
+        <td><label><input name="x_btn" type="radio" value="-1.5"></label>-1.5</td>
+        <td><label><input name="x_btn" type="radio" value="-1"></label>-1</td>
+        <td><label><input name="x_btn" type="radio" value="-0.5"></label>-0.5</td>
+        <td><label><input name="x_btn" type="radio" value="0"></label>0</td>
+        <td><label><input name="x_btn" type="radio" value="0.5"></label>0.5</td>
+        <td><label><input name="x_btn" type="radio" value="1"></label>1</td>
+        <td><label><input name="x_btn" type="radio" value="1.5"></label>1.5</td>
+        <td><label><input name="x_btn" type="radio" value="2"></label>2</td>
+    </tr>
+    <tr>
+        <td>Выберите Y:</td>
+        <td colspan="3"><input name="y_in" type="text" placeholder="Значение от -3 до 5" maxlength="4"></td>
+    </tr>
+    <td rowspan="3">Выберите R:</td>
+    <tr>
+        <td><input class="btn" name="r_btn" type="button" value="1"></td>
+        <td><input class="btn" name="r_btn" type="button" value="2"></td>
+        <td><input class="btn" name="r_btn" type="button" value="3"></td>
+        <td><input class="btn" name="r_btn" type="button" value="4"></td>
+        <td><input class="btn" name="r_btn" type="button" value="5"></td>
+    </tr>
+    </tbody>
+    <tr>
+        <td class="graphic">
+            <svg>
+                <line x1="0" y1="150" x2="300" y2="150" stroke="#000720"></line>
+                <line x1="150" y1="0" x2="150" y2="300" stroke="#000720"></line>
+                <line x1="270" y1="148" x2="270" y2="152" stroke="#000720"></line>
+                <text x="265" y="140">R</text>
+                <line x1="210" y1="148" x2="210" y2="152" stroke="#000720"></line>
+                <text x="200" y="140">R/2</text>
+                <line x1="90" y1="148" x2="90" y2="152" stroke="#000720"></line>
+                <text x="75" y="140">-R/2</text>
+                <line x1="30" y1="148" x2="30" y2="152" stroke="#000720"></line>
+                <text x="20" y="140">-R</text>
+                <line x1="148" y1="30" x2="152" y2="30" stroke="#000720"></line>
+                <text x="156" y="35">R</text>
+                <line x1="148" y1="90" x2="152" y2="90" stroke="#000720"></line>
+                <text x="156" y="95">R/2</text>
+                <line x1="148" y1="210" x2="152" y2="210" stroke="#000720"></line>
+                <text x="156" y="215">-R/2</text>
+                <line x1="148" y1="270" x2="152" y2="270" stroke="#000720"></line>
+                <text x="156" y="275">-R</text>
+                <polygon points="300,150 295,155 295, 145" fill="#000720" stroke="#000720"></polygon>
+                <polygon points="150,0 145,5 155,5" fill="#000720" stroke="#000720"></polygon>
+                <!--RECTANGLE-->
+                <rect x="90" y="30" width="60" height="120" fill-opacity="0.4" stroke="navy" fill="blue"></rect>
+                <!--TRIANGLE-->
+                <polygon points="150,150 210,150 150,90" fill-opacity="0.4" stroke="navy" fill="blue"></polygon>
+                <!--KAKAYAZHEETOHERNYA-->
+                <path d="M 150 270 Q 270 270 270 150 L 150 150 Z" fill-opacity="0.4" stroke="navy" fill="blue"></path>
+                <!--DOT-->
+                <circle id="pointer" r="5" cx="150" cy="150" fill-opacity="0.7" fill="red" stroke="firebrick"
+                        visibility="hidden"></circle>
+            </svg>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="checkButton">Проверить</button>
+        </td>
+    </tr>
+    <tfoot>
+    <tr>
+        <td colspan="5" id="outputContainer"><h4><span class="outputStub notification">Результаты отсутствуют</span>
+        </h4></td>
+    </tr>
+    </tfoot>
+</table>
+
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
