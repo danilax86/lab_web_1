@@ -23,7 +23,6 @@
     </thead>
     <tbody>
     <tr>
-
         <td colspan="15">
             <hr>
         </td>
@@ -42,19 +41,25 @@
     </tr>
     <tr>
         <td>Выберите Y:</td>
-        <td colspan="3"><input name="y_in" type="text" placeholder="Значение от -3 до 5" maxlength="4"></td>
+        <td colspan="3"><input name="y_in" type="text" placeholder="Значение от -3 до 5" maxlength="6"></td>
     </tr>
-    <td rowspan="3">Выберите R:</td>
+    <td rowspan="4">Выберите R:</td>
     <tr>
         <td><input class="btn" name="r_btn" type="button" value="1"></td>
         <td><input class="btn" name="r_btn" type="button" value="2"></td>
-        <td><input class="btn" name="r_btn" type="button" value="3"></td>
+
+    </tr>
+    <tr>
+        <td colspan="2"><input class="btn" name="r_btn" type="button" value="3"></td>
+
+    </tr>
+    <tr>
         <td><input class="btn" name="r_btn" type="button" value="4"></td>
         <td><input class="btn" name="r_btn" type="button" value="5"></td>
     </tr>
     </tbody>
     <tr>
-        <td class="graphic">
+        <td colspan="15" class="graphic">
             <svg>
                 <line x1="0" y1="150" x2="300" y2="150" stroke="#000720"></line>
                 <line x1="150" y1="0" x2="150" y2="300" stroke="#000720"></line>
@@ -89,13 +94,13 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td colspan="15">
             <button id="checkButton">Проверить</button>
         </td>
     </tr>
     <tfoot>
     <tr>
-        <td colspan="5" id="outputContainer"><h4><span class="outputStub notification">Результаты отсутствуют</span>
+        <td colspan="15" id="outputContainer"><h4><span class="outputStub notification">Результаты отсутствуют</span>
         </h4></td>
     </tr>
     </tfoot>
