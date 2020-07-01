@@ -28,8 +28,8 @@ document.getElementById("checkButton").onclick = function () {
 function setPointer() {
     let pointer = document.getElementById("pointer");
     pointer.style.visibility = "visible";
-    pointer.setAttribute("cx", x * 54 + 150);
-    pointer.setAttribute("cy", -y * 54 + 150);
+    pointer.setAttribute("cx", x * 60 + 150);
+    pointer.setAttribute("cy", -y * 60 + 150);
 }
 
 function createNotification(message) {
