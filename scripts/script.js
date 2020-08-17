@@ -73,7 +73,7 @@ function validateY() {
 
 function validateR() {
     try {
-        r = document.querySelector("input[name=r_btn]").value;
+        r = document.querySelector("select[name=r_btn]").value;
         return true;
     } catch (err) {
         createNotification("Значение R не выбрано");
