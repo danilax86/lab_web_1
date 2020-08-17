@@ -52,7 +52,7 @@ function validateX() {
         x = document.querySelector("input[type=radio]:checked").value;
         return true;
     } catch (err) {
-        createNotification("Значение R не выбрано");
+        createNotification("Значение X не выбрано");
         return false;
     }
 }
