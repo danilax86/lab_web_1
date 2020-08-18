@@ -15,7 +15,7 @@ window.onload = function () {
 function send() {
     let request = new XMLHttpRequest();
     let str = '?x=' + x + '&y=' + y + '&r=' + r;
-    request.open('GET', 'answer.php' + str, false);
+    request.open('GET', 'scripts/answer.php' + str);
     request.send();
 }
 
