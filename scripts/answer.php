@@ -1,6 +1,5 @@
 <?php
 error_reporting(0);
-// TODO: fix 404 not found error
 
 function checkData($x, $y, $r) {
     return in_array($x, array(-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2)) &&
@@ -13,9 +12,8 @@ function atRectangle($x, $y, $r) {
     else return false;
 }
 
-// Todo: fix this
 function atTriangle($x, $y, $r) {
-    if (($x >= 0) && ($x <= $r/2) && ($y >= 0) && ($y <= $r/2) && (sqrt($x**$x + $y**$y) <= $r**$r/2))
+    if (($y <= -$x + $r/2) && ($x >= 0) && ($x <= $r/2) && ($y >= 0) && ($y <= $r/2))
         return true;
     else return false;
 }
