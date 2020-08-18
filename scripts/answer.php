@@ -18,9 +18,8 @@ function atTriangle($x, $y, $r) {
     else return false;
 }
 
-// Todo: fix this
 function atQuarterCircle($x, $y, $r) {
-    if (($x <= 0) && ($y <= 0) && (($x**$x + $y**$y) <= $r)) return true;
+    if (($x >= 0) && ($y <= 0) && (($x*$x + $y*$y) <= $r*$r)) return true;
     else return false;
 }
 
