@@ -11,6 +11,7 @@ window.onload = function () {
     }
 };
 
+// TODO: fix send()
 function send() {
     let request = new XMLHttpRequest();
     let str = '?x=' + x + '&y=' + y + '&r=' + r;
