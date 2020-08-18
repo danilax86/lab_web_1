@@ -11,21 +11,13 @@ window.onload = function () {
     }
 };
 
-// TODO: fix send()
-function send() {
-    let request = new XMLHttpRequest();
-    let str = '?x=' + x + '&y=' + y + '&r=' + r;
-    request.open('GET', 'scripts/answer.php' + str);
-    request.send();
-}
-
 document.getElementById("checkButton").onclick = function () {
     if (validateX() && validateY() && validateR()) {
-        fetch("scripts/answer.php", {
+        let str = '?x=' + x + '&y=' + y + '&r=' + r;
+        fetch("scripts/answer.php" + str, {
             method: "GET",
             headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"},
         }).then(response => response.text()).then(function (serverAnswer) {
-            send();
             setPointer();
             document.getElementById("outputContainer").innerHTML = serverAnswer;
         }).catch(err => createNotification("Ошибка HTTP. Повторите попытку позже." + err));
