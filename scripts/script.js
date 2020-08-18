@@ -1,3 +1,4 @@
+"use strict";
 let x, y, r;
 
 window.onload = function () {
@@ -27,8 +28,8 @@ document.getElementById("checkButton").onclick = function () {
 function setPointer() {
     let pointer = document.getElementById("pointer");
     pointer.style.visibility = "visible";
-    pointer.setAttribute("cx", x * 60 + 150);
-    pointer.setAttribute("cy", -y * 60 + 150);
+    pointer.setAttribute("cx", (x/r*2 * 60 + 150));
+    pointer.setAttribute("cy", (-y/r*2 * 60 + 150));
 }
 
 function createNotification(message) {
