@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 // TODO: fix 404 not found error
 
 function checkData($x, $y, $r) {
@@ -12,12 +13,14 @@ function atRectangle($x, $y, $r) {
     else return false;
 }
 
+// Todo: fix this
 function atTriangle($x, $y, $r) {
     if (($x >= 0) && ($x <= $r/2) && ($y >= 0) && ($y <= $r/2) && (sqrt($x**$x + $y**$y) <= $r**$r/2))
         return true;
     else return false;
 }
 
+// Todo: fix this
 function atQuarterCircle($x, $y, $r) {
     if (($x <= 0) && ($y <= 0) && (($x**$x + $y**$y) <= $r)) return true;
     else return false;
@@ -32,7 +35,6 @@ function checkCoordinates($x, $y, $r) {
 
 @session_start();
 if (!isset($_SESSION["tableRows"])) $_SESSION["tableRows"] = array();
-if (!isset($_GET["x"]) || $_GET["y"] || $_GET["r"] || $_GET["timezone"]) die("Ошибка в php??");
 date_default_timezone_set($_GET["timezone"]);
 $x = (float) $_GET["x"];
 $y = (float) $_GET["y"];
