@@ -32,10 +32,11 @@ function checkCoordinates($x, $y, $r) {
 
 @session_start();
 if (!isset($_SESSION["tableRows"])) $_SESSION["tableRows"] = array();
-date_default_timezone_set($_POST["timezone"]);
-$x = (float) $_POST["x"];
-$y = (float) $_POST["y"];
-$r = (float) $_POST["r"];
+date_default_timezone_set($_GET["timezone"]);
+$x = (float) $_GET["x"];
+$y = (float) $_GET["y"];
+$r = (float) $_GET["r"];
+
 if (checkData($x, $y, $r)) {
     $coordsStatus = checkCoordinates($x, $y, $r);
     $currentTime = date("H : i : s");
