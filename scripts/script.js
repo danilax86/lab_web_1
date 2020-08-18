@@ -11,14 +11,20 @@ window.onload = function () {
     }
 };
 
+function send() {
+    let request = new XMLHttpRequest();
+    let str = '?x=' + x + '&y=' + y + '&r=' + r;
+    request.open('GET', 'answer.php' + str, false);
+    request.send();
+}
+
 document.getElementById("checkButton").onclick = function () {
     if (validateX() && validateY() && validateR()) {
-        fetch("answer.php", {
-            method: "POST",
+        fetch("scripts/answer.php", {
+            method: "GET",
             headers: {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"},
-            body: "x=" + encodeURIComponent(x) + "&y=" + encodeURIComponent(y) + "&r=" + encodeURIComponent(r) +
-                "&timezone=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)
         }).then(response => response.text()).then(function (serverAnswer) {
+            send();
             setPointer();
             document.getElementById("outputContainer").innerHTML = serverAnswer;
         }).catch(err => createNotification("Ошибка HTTP. Повторите попытку позже." + err));
