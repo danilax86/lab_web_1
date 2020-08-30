@@ -21,7 +21,33 @@ header {
   margin-bottom: 10px;
   transform: scale(0.5);
 }
+.pic :hover {
+  filter: drop-shadow(16px 16px 10px black);
+  transition: all 0.5s ease 0.1s;
+}
+.pic :active {
+  transform: scale(0.6);
+  transition: transform 0.2s;
+}
 
+.graphic {
+  background: beige;
+}
+.graphic .rectangle {
+  stroke: navy;
+  fill-opacity: 0.4;
+  fill: navy;
+}
+.graphic .triangle {
+  stroke: red;
+  fill-opacity: 0.4;
+  fill: red;
+}
+.graphic .quarter {
+  stroke: green;
+  fill-opacity: 0.4;
+  fill: green;
+}
 .graphic svg {
   height: 300px;
   width: 300px;
