@@ -32,7 +32,7 @@ function checkCoordinates($x, $y, $r) {
 
 @session_start();
 if (!isset($_SESSION["tableRows"])) $_SESSION["tableRows"] = array();
-date_default_timezone_set($_GET["timezone"]);
+date_default_timezone_set($_GET["Europe/Moscow"]);
 $x = (float) $_GET["x"];
 $y = (float) $_GET["y"];
 $r = (float) $_GET["r"];
