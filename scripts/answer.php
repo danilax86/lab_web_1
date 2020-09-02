@@ -41,7 +41,7 @@ if (checkData($x, $y, $r)) {
     $coordsStatus = checkCoordinates($x, $y, $r);
     $currentTime = date("H : i : s");
     $benchmarkTime = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
-    array_push($_SESSION["tableRows"], "<tr>
+    array_unshift($_SESSION["tableRows"], "<tr>
     <td>$x</td>
     <td>$y</td>
     <td>$r</td>
