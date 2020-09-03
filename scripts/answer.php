@@ -1,41 +1,44 @@
 <?php
 error_reporting(0);
 
-function checkData($x, $y, $r) {
+function checkData($x, $y, $r)
+{
     return in_array($x, array(-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2)) &&
         is_numeric($y) && ($y > -3 && $y < 5) &&
-        in_array($r, array( 1, 2, 3, 4, 5));
+        in_array($r, array(1, 2, 3, 4, 5));
 }
 
-function atRectangle($x, $y, $r) {
-    if (($x <= 0) && ($x >= -$r/2) && ($y >= 0) && ($y <= $r)) return true;
-    else return false;
+function atRectangle($x, $y, $r)
+{
+    return (($x <= 0) && ($x >= -$r / 2) && ($y >= 0) && ($y <= $r));
 }
 
-function atTriangle($x, $y, $r) {
-    if (($y <= -$x + $r/2) && ($x >= 0) && ($x <= $r/2) && ($y >= 0) && ($y <= $r/2))
-        return true;
-    else return false;
+function atTriangle($x, $y, $r)
+{
+    return (($y <= -$x + $r / 2) && ($x >= 0) && ($x <= $r / 2) && ($y >= 0) && ($y <= $r / 2));
 }
 
-function atQuarterCircle($x, $y, $r) {
-    if (($x >= 0) && ($y <= 0) && (($x*$x + $y*$y) <= $r*$r)) return true;
-    else return false;
+function atQuarterCircle($x, $y, $r)
+{
+    return (($x >= 0) && ($y <= 0) && (($x * $x + $y * $y) <= $r * $r));
 }
 
-function checkCoordinates($x, $y, $r) {
+function checkCoordinates($x, $y, $r)
+{
     if (atRectangle($x, $y, $r) || atTriangle($x, $y, $r) || atQuarterCircle($x, $y, $r)) {
-        return "Да";
-    }
-    else return "Нет";
+        return "<span style='color: green'>Да</span>";
+    } else return "<span style='color: red'>Нет</span>";
 }
 
 @session_start();
-if (!isset($_SESSION["tableRows"])) $_SESSION["tableRows"] = array();
+if (!isset($_SESSION["tableRows"])) {
+    $_SESSION["tableRows"] = array();
+}
+
 date_default_timezone_set("Europe/Moscow");
-$x = (float) $_GET["x"];
-$y = (float) $_GET["y"];
-$r = (float) $_GET["r"];
+$x = (float)$_GET["x"];
+$y = (float)$_GET["y"];
+$r = (float)$_GET["r"];
 
 if (checkData($x, $y, $r)) {
     $coordsStatus = checkCoordinates($x, $y, $r);
